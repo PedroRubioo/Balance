@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Ingresos y Gastos</title>
+<style>        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #001F3F;
+    color: white;
+}
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #001F3F;
+}
+.balance {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #0074D9;
+}
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #0074D9;
+    border-radius: 5px;
+    background-color: #F4F4F4;
+}
+button {
+    width: 48%;
+    padding: 10px;
+    margin: 5px 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+#agregarIngreso {
+    background-color: #2ECC40;
+}
+#agregarGasto {
+    background-color: #FF4136;
+}
+button:hover {
+    opacity: 0.8;
+}
+.transactions {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+.transactions li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.income {
+    background-color: #DFF0D8;
+    color: #2ECC40;
+}
+.expense {
+    background-color: #FADBD8;
+    color: #FF4136;
+}
+</style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h1>Gestión de Ingresos y Gastos</h1>
+        <p class="balance">Balance: <span id="balance">0</span></p>
+        
+        <input type="number" id="monto" placeholder="Monto" min="1">
+        <input type="text" id="descripcion" placeholder="Descripción">
+        <button id="agregarIngreso">Agregar Ingreso</button>
+        <button id="agregarGasto">Agregar Gasto</button>
+        
+        <h2>Historial de Transacciones</h2>
+        <ul id="listaTransacciones" class="transactions"></ul>
+    </div>
+    
+    <script src="./src/ts.js"></script>
+</body>
+</html>
